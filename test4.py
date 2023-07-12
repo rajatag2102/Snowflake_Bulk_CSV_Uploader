@@ -39,11 +39,11 @@ def snowpark_session_create():
 <h4 style='text-align: justify; color: black;'>Creating Connection</h4>
 """, unsafe_allow_html=True)
     connection_params = {
-    "user": "rajattrial",
-    "password": "Amazon@123",
-    "account": "iewdatu-ur46975",
-    "warehouse": "compute_wh",
-    "role": "ACCOUNTADMIN",
+    "user": "xxxx",
+    "password": "xxxx",
+    "account": "xxxx",
+    "warehouse": "xxxx",
+    "role": "xxxx",
     }
     session = Session.builder.configs(connection_params).create()
     return session
@@ -53,8 +53,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 def file_uploading(base_path, archive_path):
-    st.write(session.sql("use database bulk_database").collect())
-    st.write(session.sql("use schema bulk_schema").collect())
+    st.write(session.sql("use database xxxx").collect())
+    st.write(session.sql("use schema xxxx").collect())
 
     csv_files = [file for file in os.listdir(base_path) if file.endswith('.csv')]
     st.write(csv_files)
